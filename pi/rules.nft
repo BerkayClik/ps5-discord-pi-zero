@@ -1,0 +1,10 @@
+# Pi'den çıkan TLS el sıkışma paketlerini nfqws'e yollar (kuyruk 200).
+# Durumsuz kural: TCP yükünün ilk baytı 0x16 olan paketler dışında hiçbir şeye dokunmaz.
+# "bypass": nfqws çalışmıyorsa trafik olduğu gibi geçer.
+# Arayüzün wlan0 değilse oifname'i değiştir.
+table ip ps5gw {
+  chain post {
+    type filter hook postrouting priority mangle; policy accept;
+    oifname "wlan0" meta mark & 0x40000000 == 0 tcp dport { 443, 2053, 2083, 2087, 2096, 8443 } @ih,0,8 0x16 queue num 200 bypass
+  }
+}

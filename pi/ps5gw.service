@@ -1,0 +1,16 @@
+[Unit]
+Description=PS5 Discord DPI bypass (zapret nfqws)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStartPre=-/usr/sbin/nft delete table ip ps5gw
+ExecStartPre=/usr/sbin/nft -f /opt/ps5gw/rules.nft
+ExecStart=/opt/zapret/binaries/linux-arm64/nfqws --qnum=200 --hostlist=/opt/ps5gw/discord-hosts.txt --dpi-desync=fake --dpi-desync-fooling=md5sig
+ExecStopPost=-/usr/sbin/nft delete table ip ps5gw
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target
