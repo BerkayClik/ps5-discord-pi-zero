@@ -1,0 +1,43 @@
+pi/rules.nft
+  s_f37067a90b0d41::t_52d4175ca924ba 1-10
+.gitignore
+  s_d1769791263361::t_49413b3bedbbcc 1-3
+yazi.md
+  s_d1769791263361::t_82e9a8d0d15c50 1-304
+diagrams/make.py
+  s_d1769791263361::t_555b07234a7b7a 1-250
+pi/make-config.sh
+  s_d1769791263361::t_df17d4f3e37c52 1-90
+pi/ps5gw.service
+  s_d1769791263361::t_8b41dc1a51af77 1-16
+pi/try-strategy.sh
+  s_d1769791263361::t_debe63a4377f98 1-37
+pi/discord-hosts.txt
+  s_d1769791263361::t_096fa8e93bcf22 1-21
+README.md
+  s_d1769791263361::t_e4883b01651211 1-179
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "c41b6b3f472ea79622d2ce8b4adce4df20f9879c",
+  "prompts": {},
+  "sessions": {
+    "s_d1769791263361": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "60149bbb-a050-4482-991c-07bc877a5ec3",
+        "model": "claude-mythos-5-2"
+      },
+      "human_author": "BerkayClik <31419720+BerkayClik@users.noreply.github.com>"
+    },
+    "s_f37067a90b0d41": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "41938fa4-c7ea-4f67-b342-04ebcd045d45",
+        "model": "claude-mythos-5-2"
+      },
+      "human_author": "BerkayClik <31419720+BerkayClik@users.noreply.github.com>"
+    }
+  }
+}
